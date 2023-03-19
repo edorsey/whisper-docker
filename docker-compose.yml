@@ -1,0 +1,13 @@
+version: '3.5'
+services:
+  whisper:
+    image: edorsey/whisper:latest
+    runtime: nvidia
+    command: whisper --help
+    volumes:
+    - ./data:/data
+
+  smi:
+    image: edorsey/whisper:latest
+    runtime: nvidia
+    entrypoint: nvidia-smi
